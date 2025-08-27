@@ -1,0 +1,27 @@
+.services {
+  padding: 33px 0;
+  background: var(--main-200, #a8d3fb);
+
+  @media (max-width: 440px) {
+    padding: 20px 0;
+  }
+
+  // .services__inner
+
+  &__inner {
+  }
+
+  // .services__title
+
+  &__title {
+  }
+
+  // .services__muted
+
+  &__muted {
+    color: var(--main-400, #4d64e5);
+    font-size: clamp(1.5rem, 1.156rem + 1.25vw, 2.25rem);
+    font-weight: 400;
+    line-height: 125.904%; /* 45.326px */
+  }
+}

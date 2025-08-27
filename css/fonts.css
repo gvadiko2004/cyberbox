@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+:root {
+  --blue: #2a45e0;
+  --black: #0d0d0d;
+  --grey: #bcbebf;
+  --main-500: #2a45e0;
+  --main-50: #e9ecfc;
+  --main-950: #030616;
+  --main-100: #d2d8f9;
+  --main-200: #a8d3fb;
+  --main-300: #798bec;
+  --main-400: #4d64e5;
+  --main-600: #1a31b2;
+  --main-700: #132586;
+  --main-800: #0d1859;
+  --main-900: #060c2d;
+  --secondary-500: #bcbebf;
+  --secondary-50: #f2f2f3;
+  --secondary-950: #0c0d0d;
+  --secondary-100: #e5e6e6;
+  --secondary-200: #cbcccd;
+  --secondary-300: #fff4d8;
+  --secondary-400: #d1fff5;
+  --secondary-600: #646768;
+  --secondary-700: #4b4d4e;
+  --secondary-800: #323334;
+  --secondary-900: #191a1a;
+}
+
+:root {
+  --font-family: Manrope, sans-serif;
+}

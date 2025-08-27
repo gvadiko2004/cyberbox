@@ -1,0 +1,17 @@
+.about {
+  background: var(--secondary-100, #e5e6e6);
+  padding: 40px 0;
+
+  @media (max-width: 440px) {
+    padding: 20px 0;
+  }
+
+  // .about__muted
+
+  &__muted {
+    color: var(--main-400, #4d64e5);
+    font-size: clamp(2.25rem, 1.219rem + 3.75vw, 4.5rem);
+    font-weight: 400;
+    line-height: 136.944%;
+  }
+}

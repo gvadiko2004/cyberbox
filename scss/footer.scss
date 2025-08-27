@@ -1,0 +1,147 @@
+.footer {
+  background: var(--main-400, #4d64e5);
+  padding: 40px 0 140px 0;
+
+  @media (max-width: 440px) {
+    padding: 40px 0;
+  }
+
+  // .footer__inner
+
+  &__inner {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+    align-items: center;
+
+    @media (max-width: 440px) {
+      gap: 44px;
+    }
+  }
+
+  // .footer__info
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  // .footer__info-item
+
+  &__info-item {
+  }
+
+  // .footer__info-link
+
+  &__info-link {
+    color: #fff;
+    font-size: clamp(1.5rem, 1.156rem + 1.25vw, 2.25rem);
+    font-weight: 400;
+    line-height: 125.904%; /* 45.326px */
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+.footer-nav {
+  // .footer-nav__title
+
+  &__title {
+    color: var(--main-50, #e9ecfc);
+    opacity: 0.5;
+    font-size: clamp(1.25rem, 1.135rem + 0.42vw, 1.5rem);
+    margin-bottom: 52px;
+    font-weight: 400;
+
+    @media (max-width: 440px) {
+      margin-bottom: 22px;
+    }
+  }
+
+  // .footer-nav__list
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  // .footer-nav__list-item
+
+  &__list-item {
+  }
+
+  // .footer-nav__list-link
+
+  &__list-link {
+    color: var(--main-50, #e9ecfc);
+
+    /* h4 */
+    font-size: clamp(1.125rem, 0.953rem + 0.63vw, 1.5rem);
+    font-weight: 400;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+.footer-social {
+  // .footer-social__title
+
+  &__title {
+    color: var(--main-50, #e9ecfc);
+
+    font-size: clamp(1.125rem, 0.953rem + 0.63vw, 1.5rem);
+    font-weight: 400;
+
+    margin-bottom: 52px;
+    opacity: 0.5;
+
+    @media (max-width: 440px) {
+      margin-bottom: 22px;
+    }
+  }
+
+  // .footer-social__list
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  // .footer-social__list-item
+
+  &__list-item {
+  }
+
+  // .footer-social__list-link
+
+  &__list-link {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #e9ecfc;
+    border-radius: 100px;
+
+    &:hover {
+      background-color: #2a45e0;
+
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+  }
+}
