@@ -2233,6 +2233,7 @@
       // -------------------------------
       // Development section animation
       // -------------------------------
+      // Таймлайн для заголовка и подзаголовка
       const developmentTL = gsap.timeline({
         scrollTrigger: {
           trigger: ".development",
@@ -2261,13 +2262,19 @@
         "+=0.1"
       );
 
-      // Список пунктов web/mobile
-      developmentTL.from(".development-list__item", {
-        y: 20,
-        opacity: 0,
-        stagger: 0.15,
-        duration: 0.3,
-        ease: "power2.out",
+      // Каждый пункт списка срабатывает при появлении в зоне видимости
+      gsap.utils.toArray(".development-list__item").forEach((item) => {
+        gsap.from(item, {
+          y: 20,
+          opacity: 0,
+          duration: 0.4,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: item,
+            start: "top 85%", // когда элемент чуть войдет в экран
+            toggleActions: "play none none none",
+          },
+        });
       });
 
       // -------------------------------
@@ -2289,18 +2296,20 @@
         ease: "power2.out",
       });
 
-      // Пункты списка с задержкой
-      worksTL.from(
-        ".works__list-item",
-        {
+      // Каждый пункт списка появляется при попадании в viewport
+      gsap.utils.toArray(".works__list-item").forEach((item) => {
+        gsap.from(item, {
           y: 20,
           opacity: 0,
-          stagger: 0.15,
           duration: 0.6,
           ease: "power2.out",
-        },
-        "+=0.1"
-      );
+          scrollTrigger: {
+            trigger: item,
+            start: "top 85%", // когда элемент доходит до экрана
+            toggleActions: "play none none none",
+          },
+        });
+      });
 
       // -------------------------------
       // Step section animation
