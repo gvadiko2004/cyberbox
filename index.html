@@ -107,7 +107,7 @@
                     +380 (67) 402 60 46
                   </a>
                   <a href="#!" class="header-nav__info-link">
-                    <span>UK:</span> 
+                    <span>UK:</span>
                     +44 74 78618228
                   </a>
                 </div>
@@ -1792,7 +1792,9 @@
 
                   <span class="works__list-muted"> NDA project </span>
 
-                  <h4 class="works__list-title">Mobile App events analytics system</h4>
+                  <h4 class="works__list-title">
+                    Mobile App events analytics system
+                  </h4>
                 </li>
 
                 <li class="works__list-item">
@@ -1814,7 +1816,7 @@
 
                   <span class="works__list-muted"> IF&Partners </span>
 
-                  <h4 class="works__list-title">Website redesign </h4>
+                  <h4 class="works__list-title">Website redesign</h4>
                 </li>
 
                 <li class="works__list-item">
@@ -2052,5 +2054,368 @@
     </div>
 
     <script src="./js/main.js"></script>
+
+    <!-- Подключение GSAP -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Подключение ScrollTrigger -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+      integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.1/ScrollTrigger.min.js"></script>
+
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      // -------------------------------
+      // Header animation
+      // -------------------------------
+
+      // Логотип
+      gsap.from(".header__logo", {
+        y: -50,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+      });
+
+      // Пункты меню
+      gsap.from(".header__list-item", {
+        y: -20,
+        opacity: 0,
+        stagger: 0.15,
+        duration: 0.6,
+        ease: "power2.out",
+      });
+
+      // Социальные иконки
+      gsap.from(".header-nav__social-item", {
+        y: 20,
+        opacity: 0,
+        stagger: 0.1,
+        duration: 0.6,
+        ease: "power2.out",
+      });
+
+      // Контакты
+      gsap.from(".header-nav__info-link", {
+        y: 20,
+        opacity: 0,
+        stagger: 0.1,
+        duration: 0.6,
+        ease: "power2.out",
+      });
+
+      // -------------------------------
+      // Hero section animation
+      // -------------------------------
+
+      const heroTitle = document.querySelector(".hero-content__title");
+      heroTitle.innerHTML = heroTitle.textContent
+        .split("")
+        .map((char) => `<span class="char">${char}</span>`)
+        .join("");
+
+      // Заголовок по буквам
+      gsap.from(".hero-content__title .char", {
+        y: 30,
+        opacity: 0,
+        stagger: 0.02,
+        duration: 0.1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".hero",
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // Форма
+      gsap.from(".hero-content__form", {
+        y: 30,
+        opacity: 0,
+        scale: 0.95,
+        duration: 0.8,
+        ease: "back.out(1.2)",
+        scrollTrigger: {
+          trigger: ".hero",
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // Кнопка
+      gsap.from(".hero-content__btn", {
+        y: 30,
+        opacity: 0,
+        scale: 0.95,
+        duration: 0.8,
+        ease: "back.out(1.2)",
+        scrollTrigger: {
+          trigger: ".hero",
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // -------------------------------
+      // About section animation
+      // -------------------------------
+      const aboutTL = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".about",
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // Заголовок секции
+      aboutTL.from(".about__title", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+      });
+
+      // Текст появляется с небольшой задержкой после заголовка
+      aboutTL.from(
+        ".about__muted",
+        {
+          y: 20,
+          opacity: 0,
+          duration: 0.8,
+          ease: "power2.out",
+        },
+        "+=0.1" // задержка 0.1 секунды после заголовка
+      );
+
+      // -------------------------------
+      // Services section animation
+      // -------------------------------
+      const servicesTL = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".services",
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // Заголовок секции
+      servicesTL.from(".services__title", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+      });
+
+      // Текст появляется с небольшой задержкой после заголовка
+      servicesTL.from(
+        ".services__muted",
+        {
+          y: 20,
+          opacity: 0,
+          duration: 0.8,
+          ease: "power2.out",
+        },
+        "+=0.05" // задержка 0.1 секунды после заголовка
+      );
+
+      // -------------------------------
+      // Development section animation
+      // -------------------------------
+      const developmentTL = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".development",
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // Заголовок секции
+      developmentTL.from(".development__title", {
+        y: 30,
+        opacity: 0,
+        duration: 0.4,
+        ease: "power2.out",
+      });
+
+      // Подзаголовок или текст
+      developmentTL.from(
+        ".development__muted",
+        {
+          y: 20,
+          opacity: 0,
+          duration: 0.4,
+          ease: "power2.out",
+        },
+        "+=0.1"
+      );
+
+      // Список пунктов web/mobile
+      developmentTL.from(".development-list__item", {
+        y: 20,
+        opacity: 0,
+        stagger: 0.15,
+        duration: 0.3,
+        ease: "power2.out",
+      });
+
+      // -------------------------------
+      // Works section animation
+      // -------------------------------
+      const worksTL = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".works",
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // Заголовок секции
+      worksTL.from(".works__title", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+      });
+
+      // Пункты списка с задержкой
+      worksTL.from(
+        ".works__list-item",
+        {
+          y: 20,
+          opacity: 0,
+          stagger: 0.15,
+          duration: 0.6,
+          ease: "power2.out",
+        },
+        "+=0.1"
+      );
+
+      // -------------------------------
+      // Step section animation
+      // -------------------------------
+      const stepTL = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".step",
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // Заголовок секции
+      stepTL.from(".step .works__title", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+      });
+
+      // Анимация каждого шага
+      stepTL.from(
+        ".step__list-item",
+        {
+          y: 20,
+          opacity: 0,
+          stagger: 0.2, // небольшая задержка между шагами
+          duration: 0.6,
+          ease: "power2.out",
+        },
+        "+=0.1"
+      );
+
+      // Дополнительно можно анимировать номер, заголовок и текст внутри каждого шага
+      gsap.from(".step__list-count", {
+        y: -10,
+        opacity: 0,
+        stagger: 0.2,
+        duration: 0.5,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".step",
+          start: "top 80%",
+        },
+      });
+
+      gsap.from(".step__list-title", {
+        y: 10,
+        opacity: 0,
+        stagger: 0.2,
+        duration: 0.5,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".step",
+          start: "top 80%",
+        },
+      });
+
+      gsap.from(".step__list-subtitle", {
+        y: 10,
+        opacity: 0,
+        stagger: 0.2,
+        duration: 0.5,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".step",
+          start: "top 80%",
+        },
+      });
+
+      // -------------------------------
+      // Footer animation
+      // -------------------------------
+      const footerTL = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".footer",
+          start: "top 90%", // анимация срабатывает чуть раньше, чем футер полностью виден
+          toggleActions: "play none none none",
+        },
+      });
+
+      // Анимация информации
+      footerTL.from(".footer__info-item", {
+        y: 20,
+        opacity: 0,
+        stagger: 0.15,
+        duration: 0.6,
+        ease: "power2.out",
+      });
+
+      // Анимация навигации футера
+      footerTL.from(
+        ".footer-nav__list-item",
+        {
+          y: 20,
+          opacity: 0,
+          stagger: 0.15,
+          duration: 0.6,
+          ease: "power2.out",
+        },
+        "-=0.4" // запускаем чуть раньше предыдущей анимации, чтобы была плавная последовательность
+      );
+
+      // Анимация социальных иконок
+      footerTL.from(
+        ".footer-social__list-item",
+        {
+          y: 20,
+          opacity: 0,
+          stagger: 0.1,
+          duration: 0.6,
+          ease: "power2.out",
+        },
+        "-=0.4"
+      );
+    </script>
   </body>
 </html>
