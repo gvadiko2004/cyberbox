@@ -2314,71 +2314,75 @@
       // -------------------------------
       // Step section animation
       // -------------------------------
-      const stepTL = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".step",
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
-      });
+     // -------------------------------
+// Step section animation
+// -------------------------------
 
-      // Заголовок секции
-      stepTL.from(".step .works__title", {
-        y: 30,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power2.out",
-      });
+// Заголовок секции
+gsap.from(".step__title", {
+  y: 30,
+  opacity: 0,
+  duration: 0.8,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".step",
+    start: "top 80%",
+    toggleActions: "play none none none",
+  },
+});
 
-      // Анимация каждого шага
-      stepTL.from(
-        ".step__list-item",
-        {
-          y: 20,
-          opacity: 0,
-          stagger: 0.2, // небольшая задержка между шагами
-          duration: 0.6,
-          ease: "power2.out",
-        },
-        "+=0.1"
-      );
+// Каждый шаг появляется при скролле
+gsap.utils.toArray(".step__list-item").forEach((item) => {
+  gsap.from(item, {
+    y: 20,
+    opacity: 0,
+    duration: 0.6,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: item,
+      start: "top 85%",
+      toggleActions: "play none none none",
+    },
+  });
 
-      // Дополнительно можно анимировать номер, заголовок и текст внутри каждого шага
-      gsap.from(".step__list-count", {
-        y: -10,
-        opacity: 0,
-        stagger: 0.2,
-        duration: 0.5,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ".step",
-          start: "top 80%",
-        },
-      });
+  // Внутренние элементы шага
+  gsap.from(item.querySelector(".step__list-count"), {
+    y: -10,
+    opacity: 0,
+    duration: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: item,
+      start: "top 85%",
+      toggleActions: "play none none none",
+    },
+  });
 
-      gsap.from(".step__list-title", {
-        y: 10,
-        opacity: 0,
-        stagger: 0.2,
-        duration: 0.5,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ".step",
-          start: "top 80%",
-        },
-      });
+  gsap.from(item.querySelector(".step__list-title"), {
+    y: 10,
+    opacity: 0,
+    duration: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: item,
+      start: "top 85%",
+      toggleActions: "play none none none",
+    },
+  });
 
-      gsap.from(".step__list-subtitle", {
-        y: 10,
-        opacity: 0,
-        stagger: 0.2,
-        duration: 0.5,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ".step",
-          start: "top 80%",
-        },
-      });
+  gsap.from(item.querySelector(".step__list-subtitle"), {
+    y: 10,
+    opacity: 0,
+    duration: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: item,
+      start: "top 85%",
+      toggleActions: "play none none none",
+    },
+  });
+});
+
 
       // -------------------------------
       // Footer animation
