@@ -26,16 +26,26 @@
   // .works__list-item
 
   &__list-item {
+    cursor: pointer;
   }
 
   // .works__list-img
 
   &__list-img {
+    overflow: hidden;
+    border-radius: 20px;
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
     img {
       display: block;
       border-radius: 20px;
       overflow: hidden;
       height: 100%;
+      transition: 0.3s ease-in-out;
 
       @media (max-width: 768px) {
         border-radius: 12px;

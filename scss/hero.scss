@@ -42,6 +42,7 @@
   &__form-input {
     margin: 50px 0 20px 0;
     position: relative;
+    width: 100%;
 
     @media (max-width: 440px) {
       margin: 32px 0 18px 0;
@@ -51,7 +52,7 @@
       border-radius: 60px;
       border: 1px solid var(--main-50, #e9ecfca3);
       box-shadow: 2px 2px 25px 0 rgba(168, 211, 251, 0.1);
-      padding: 40px 50px;
+      padding: 40px 150px;
 
       max-width: 762px;
       width: 100%;
