@@ -75,12 +75,6 @@ a {
   }
 }
 
-
-
-
-
-
-
 .hero-content__form-input {
   position: relative;
   display: inline-flex;
@@ -102,11 +96,15 @@ a {
   background: transparent;
   outline: none;
   z-index: 1;
+
+  @media (max-width: 440px) {
+    padding: 20px 30px;
+  }
 }
 
 .type-overlay {
   position: absolute;
-  left: 50px; /* совпадает с padding-left input */
+  left: 30px; /* совпадает с padding-left input */
   top: 50%;
   transform: translateY(-50%);
   font: 18px/1.2 monospace;
@@ -117,6 +115,8 @@ a {
   white-space: nowrap;
   overflow: hidden;
   z-index: 2;
+
+
 }
 
 .type-overlay .cursor {
@@ -130,5 +130,7 @@ a {
 }
 
 @keyframes blink {
-  50% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
 }

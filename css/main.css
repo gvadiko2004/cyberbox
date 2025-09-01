@@ -103,10 +103,15 @@ a {
   outline: none;
   z-index: 1;
 }
+@media (max-width: 440px) {
+  .hero-content__form-input .input-placeholder {
+    padding: 20px 30px;
+  }
+}
 
 .type-overlay {
   position: absolute;
-  left: 50px; /* совпадает с padding-left input */
+  left: 30px; /* совпадает с padding-left input */
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
