@@ -151,6 +151,109 @@ a {
     opacity: 0;
   }
 }
+button:hover,
+a:hover {
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.popap-2 .plus-list .plus-list__item:nth-child(1) .sep {
+  height: 200px !important;
+}
+@media (max-width: 440px) {
+  .popap-2 .plus-list .plus-list__item:nth-child(1) .sep {
+    height: 120px !important;
+  }
+}
+.popap-2 .plus-list .plus-list__item:nth-child(2) .sep {
+  height: 170px !important;
+}
+@media (max-width: 440px) {
+  .popap-2 .plus-list .plus-list__item:nth-child(2) .sep {
+    height: 100px !important;
+  }
+}
+.popap-2 .plus-list .plus-list__item:nth-child(3) .sep {
+  height: 192px !important;
+}
+@media (max-width: 440px) {
+  .popap-2 .plus-list .plus-list__item:nth-child(3) .sep {
+    height: 122px !important;
+  }
+}
+
+.popap-3 .plus-list .plus-list__item:nth-child(1) .sep {
+  height: 200px !important;
+}
+@media (max-width: 440px) {
+  .popap-3 .plus-list .plus-list__item:nth-child(1) .sep {
+    height: 120px !important;
+  }
+}
+.popap-3 .plus-list .plus-list__item:nth-child(2) .sep {
+  height: 185px !important;
+}
+@media (max-width: 440px) {
+  .popap-3 .plus-list .plus-list__item:nth-child(2) .sep {
+    height: 100px !important;
+  }
+}
+.popap-3 .plus-list .plus-list__item:nth-child(3) .sep {
+  height: 141px !important;
+}
+@media (max-width: 440px) {
+  .popap-3 .plus-list .plus-list__item:nth-child(3) .sep {
+    height: 82px !important;
+  }
+}
+
+.popap-4 .plus-list .plus-list__item:nth-child(1) .sep {
+  height: 200px !important;
+}
+@media (max-width: 440px) {
+  .popap-4 .plus-list .plus-list__item:nth-child(1) .sep {
+    height: 120px !important;
+  }
+}
+.popap-4 .plus-list .plus-list__item:nth-child(2) .sep {
+  height: 185px !important;
+}
+@media (max-width: 440px) {
+  .popap-4 .plus-list .plus-list__item:nth-child(2) .sep {
+    height: 100px !important;
+  }
+}
+.popap-4 .plus-list .plus-list__item:nth-child(3) .sep {
+  height: 150px !important;
+}
+@media (max-width: 440px) {
+  .popap-4 .plus-list .plus-list__item:nth-child(3) .sep {
+    height: 82px !important;
+  }
+}
+
+@media (min-width: 1080px) {
+  .contact-us-btn {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    border-radius: 200px;
+    color: #fff;
+    background-color: #000;
+    text-transform: uppercase;
+    width: 200px;
+    height: 200px;
+    font-size: 28px;
+    font-weight: 100;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s ease !important;
+    transition: opacity 0.2s ease !important;
+  }
+}
 @font-face {
   font-family: "Manrope";
   src: url("../fonts/Manrope-Regular.woff2") format("woff2");
@@ -273,6 +376,9 @@ body {
   text-align: center;
   font-size: clamp(1rem, 0.914rem + 0.31vw, 1.188rem);
   font-weight: 400;
+}
+.header__list-link:hover {
+  opacity: 0.6;
 }
 @media (max-width: 440px) {
   .header__list-link {
@@ -1047,7 +1153,7 @@ body {
   top: 0;
   z-index: 100;
   background: var(--main-900, #060c2d);
-  padding: 105px 0;
+  padding: 105px 0 0 0;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -1060,7 +1166,7 @@ body {
 }
 @media (max-width: 768px) {
   .popup {
-    padding: 45px 0;
+    padding: 45px 0 0 0;
   }
 }
 .popup__title {
@@ -1323,9 +1429,11 @@ body {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  margin-bottom: 120px;
 }
 @media (max-width: 440px) {
   .plus-list {
+    margin-bottom: 100px;
     margin-top: 30px;
   }
 }
@@ -1374,6 +1482,8 @@ body {
   color: var(--main-200, #a8d3fb);
   font-size: clamp(1.25rem, 1.14rem + 0.4vw, 1.5rem);
   font-weight: 400;
+  position: absolute;
+  top: 100%;
 }
 @media (max-width: 440px) {
   .plus-list__item-bottom {
@@ -1438,6 +1548,7 @@ body {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+  z-index: 102;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   -webkit-transform: translateY(40px);
@@ -1613,6 +1724,105 @@ body {
   }
 }
 
+.banner {
+  overflow: hidden;
+  width: 100%;
+  background: #f9f9f9;
+  padding: 160px 0;
+  cursor: pointer;
+}
+.banner:hover {
+  opacity: 0.8;
+}
+@media (max-width: 768px) {
+  .banner {
+    padding: 20px 0;
+  }
+}
+
+.banner-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  gap: 60px;
+  -webkit-animation: scroll 80s linear infinite;
+          animation: scroll 80s linear infinite;
+}
+@media (max-width: 440px) {
+  .banner-track {
+    gap: 20px;
+  }
+}
+
+.banner:hover .banner-track {
+  -webkit-animation: none;
+          animation: none;
+}
+
+.banner-item {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 60px;
+}
+@media (max-width: 440px) {
+  .banner-item {
+    gap: 20px;
+  }
+}
+.banner-item span {
+  display: block;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
+}
+@media (max-width: 440px) {
+  .banner-item svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+.banner-item h2 {
+  color: var(--main-400, #4d64e5);
+  font-size: clamp(2.625rem, 0.26rem + 8.6vw, 8rem);
+  font-weight: 400;
+  line-height: 76px; /* 59.375% */
+}
+
+/* Анимация прокрутки */
+@-webkit-keyframes scroll {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+@keyframes scroll {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
 .footer {
   background: var(--main-400, #4d64e5);
   padding: 40px 0 140px 0;

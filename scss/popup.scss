@@ -6,7 +6,7 @@
   top: 0;
   z-index: 100;
   background: var(--main-900, #060c2d);
-  padding: 105px 0;
+  padding: 105px 0 0 0;
 
   opacity: 0;
   visibility: hidden;
@@ -19,7 +19,7 @@
   }
 
   @media (max-width: 768px) {
-    padding: 45px 0;
+    padding: 45px 0 0 0;
   }
 
   overflow: auto;
@@ -314,7 +314,10 @@
   margin-top: 50px;
   align-items: flex-end;
 
+  margin-bottom: 120px;
+
   @media (max-width: 440px) {
+    margin-bottom: 100px;
     margin-top: 30px;
   }
 
@@ -369,6 +372,9 @@
     color: var(--main-200, #a8d3fb);
     font-size: clamp(1.25rem, 1.14rem + 0.4vw, 1.5rem);
     font-weight: 400;
+
+    position: absolute;
+    top: 100%;
 
     @media (max-width: 440px) {
       font-size: 14px;
@@ -428,8 +434,6 @@
     }
   }
 }
-
-
 
 .popup__img-sep {
   margin-top: 50px;

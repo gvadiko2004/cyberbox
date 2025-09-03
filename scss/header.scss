@@ -28,6 +28,10 @@
     font-size: clamp(1rem, 0.914rem + 0.31vw, 1.188rem);
     font-weight: 400;
 
+    &:hover {
+      opacity: 0.6;
+    }
+
     @media (max-width: 440px) {
       font-size: 20px;
     }

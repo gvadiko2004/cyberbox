@@ -115,8 +115,6 @@ a {
   white-space: nowrap;
   overflow: hidden;
   z-index: 2;
-
-
 }
 
 .type-overlay .cursor {
@@ -132,5 +130,137 @@ a {
 @keyframes blink {
   50% {
     opacity: 0;
+  }
+}
+
+button:hover,
+a:hover {
+  transition: 0.2s ease;
+}
+
+.popap-2 {
+  .plus-list {
+    .plus-list__item:nth-child(1) {
+      .sep {
+        height: 200px !important;
+
+        @media (max-width: 440px) {
+          height: 120px !important;
+        }
+      }
+    }
+
+    .plus-list__item:nth-child(2) {
+      .sep {
+        height: 170px !important;
+
+        @media (max-width: 440px) {
+          height: 100px !important;
+        }
+      }
+    }
+
+    .plus-list__item:nth-child(3) {
+      .sep {
+        height: 192px !important;
+
+        @media (max-width: 440px) {
+          height: 122px !important;
+        }
+      }
+    }
+  }
+}
+
+.popap-3 {
+  .plus-list {
+    .plus-list__item:nth-child(1) {
+      .sep {
+        height: 200px !important;
+
+        @media (max-width: 440px) {
+          height: 120px !important;
+        }
+      }
+    }
+
+    .plus-list__item:nth-child(2) {
+      .sep {
+        height: 185px !important;
+
+        @media (max-width: 440px) {
+          height: 100px !important;
+        }
+      }
+    }
+
+    .plus-list__item:nth-child(3) {
+      .sep {
+        height: 141px !important;
+
+        @media (max-width: 440px) {
+          height: 82px !important;
+        }
+      }
+    }
+  }
+}
+
+.popap-4 {
+  .plus-list {
+    .plus-list__item:nth-child(1) {
+      .sep {
+        height: 200px !important;
+
+        @media (max-width: 440px) {
+          height: 120px !important;
+        }
+      }
+    }
+
+    .plus-list__item:nth-child(2) {
+      .sep {
+        height: 185px !important;
+
+        @media (max-width: 440px) {
+          height: 100px !important;
+        }
+      }
+    }
+
+    .plus-list__item:nth-child(3) {
+      .sep {
+        height: 150px !important;
+
+        @media (max-width: 440px) {
+          height: 82px !important;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1080px) {
+  .contact-us-btn {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 200px;
+    color: #fff;
+    background-color: #000;
+    text-transform: uppercase;
+
+    width: 200px;
+    height: 200px;
+
+    font-size: 28px;
+    font-weight: 100;
+    text-align: center;
+
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease !important;
   }
 }
