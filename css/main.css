@@ -243,9 +243,10 @@ a:hover {
     color: #fff;
     background-color: #000;
     text-transform: uppercase;
-    width: 200px;
-    height: 200px;
-    font-size: 28px;
+    z-index: 100;
+    width: 160px;
+    height: 160px;
+    font-size: 24px;
     font-weight: 100;
     text-align: center;
     pointer-events: none;
@@ -254,6 +255,15 @@ a:hover {
     transition: opacity 0.2s ease !important;
   }
 }
+@media (max-width: 1080px) {
+  .contact-us-btn {
+    display: none;
+  }
+}
+.banner.active * {
+  cursor: none !important;
+}
+
 @font-face {
   font-family: "Manrope";
   src: url("../fonts/Manrope-Regular.woff2") format("woff2");
@@ -1095,6 +1105,8 @@ body {
   border: 1px solid var(--main-50, #e9ecfc);
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
+  position: relative;
+  height: 530px;
 }
 .step__list-item:hover {
   background-color: #fff;
@@ -1108,6 +1120,7 @@ body {
 @media (max-width: 768px) {
   .step__list-item {
     padding: 28px;
+    height: 295px;
   }
 }
 .step__list-count {
@@ -1133,6 +1146,15 @@ body {
   font-size: clamp(0.875rem, 0.76rem + 0.42vw, 1.125rem);
   font-weight: 400;
   line-height: 120%; /* 21.6px */
+  position: absolute;
+  padding-right: 28px;
+  top: 360px;
+}
+@media (max-width: 440px) {
+  .step__list-subtitle {
+    top: auto;
+    bottom: 28px;
+  }
 }
 
 .step__list-item:hover .step__list-count {
@@ -1157,11 +1179,20 @@ body {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
   overflow: auto;
+}
+.popup .banner {
+  background: var(--main-100, #d2d8f9) !important;
 }
 .popup.active {
   opacity: 1;
   visibility: visible;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   pointer-events: all;
 }
 @media (max-width: 768px) {
@@ -1727,8 +1758,11 @@ body {
 .banner {
   overflow: hidden;
   width: 100%;
-  background: #f9f9f9;
-  padding: 160px 0;
+  background: var(--secondary-400, #d1fff5);
+  height: 380px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   cursor: pointer;
 }
 .banner:hover {
@@ -1736,6 +1770,7 @@ body {
 }
 @media (max-width: 768px) {
   .banner {
+    height: 140px;
     padding: 20px 0;
   }
 }
@@ -1755,11 +1790,6 @@ body {
   .banner-track {
     gap: 20px;
   }
-}
-
-.banner:hover .banner-track {
-  -webkit-animation: none;
-          animation: none;
 }
 
 .banner-item {

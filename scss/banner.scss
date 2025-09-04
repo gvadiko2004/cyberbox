@@ -1,8 +1,11 @@
 .banner {
   overflow: hidden;
   width: 100%;
-  background: #f9f9f9;
-  padding: 160px 0;
+  background: var(--secondary-400, #d1fff5);
+  // padding: 160px 0;
+
+  height: 380px;
+  display: flex;
 
   cursor: pointer;
 
@@ -11,6 +14,7 @@
   }
 
   @media (max-width: 768px) {
+    height: 140px;
     padding: 20px 0;
   }
 }
@@ -26,11 +30,11 @@
   }
 }
 
-.banner:hover {
-  .banner-track {
-    animation: none;
-  }
-}
+// .banner:hover {
+//   .banner-track {
+//     animation: none;
+//   }
+// }
 
 .banner-item {
   font-size: 48px;
