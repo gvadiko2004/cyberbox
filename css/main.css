@@ -271,6 +271,7 @@ a:hover {
     font-size: 18px;
     font-weight: 400;
     line-height: 120%; /* 21.6px */
+    z-index: 111;
   }
 }
 @media (max-width: 1080px) {
@@ -1782,9 +1783,6 @@ body {
   display: -ms-flexbox;
   display: flex;
   cursor: pointer;
-}
-.banner:hover {
-  opacity: 0.8;
 }
 @media (max-width: 768px) {
   .banner {
