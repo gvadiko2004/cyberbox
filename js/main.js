@@ -3,6 +3,8 @@ const menu = document.querySelector(".header-nav");
 const btnOpenMenu = document.querySelector(".btn-open");
 const btnCloseMenu = document.querySelector(".btn-close-menu");
 
+const itemClose = document.querySelectorAll(".header__list-item");
+
 if (btnOpenMenu && menu) {
   btnOpenMenu.addEventListener("click", () => {
     menu.classList.add("active");
@@ -36,6 +38,12 @@ if (form) {
     });
   }
 }
+
+itemClose.forEach((item) => {
+  item.addEventListener("click", function () {
+    menu.classList.remove("active");
+  });
+});
 
 // open-popap-1
 
