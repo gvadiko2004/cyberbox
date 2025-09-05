@@ -233,8 +233,9 @@
 
     @media (max-width: 440px) {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 10px;
+      row-gap: 20px;
     }
   }
 
@@ -271,9 +272,18 @@
         height: 80px;
       }
 
+      @media (max-width: 440px) {
+        height: 60px;
+      }
+
       svg {
         @media (max-width: 768px) {
           width: 30%;
+        }
+
+        @media (max-width: 440px) {
+          width: 34%;
+          height: 40%;
         }
       }
     }
