@@ -70,8 +70,8 @@
     }
 
     @media (max-width: 480px) {
-      width: 88px;
-      height: 88px;
+      width: 48px;
+      height:48px;
 
       img {
         width: 100%;
@@ -210,5 +210,22 @@
     svg {
       height: 80%;
     }
+  }
+}
+
+.btn-close-popup {
+  position: fixed !important;
+  right: 40px;
+  top: 40px;
+  z-index: 1111;
+
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+
+  &.active {
+    visibility: visible;
+    pointer-events: all;
+    opacity: 1;
   }
 }

@@ -14,12 +14,12 @@
   z-index: 9999;
   transition: all 0.2s ease;
 
-  transform:translateY(40px);
+  transform: translateY(40px);
 
   &.active {
     opacity: 1;
     pointer-events: all;
-    transform:  translateY(0px);
+    transform: translateY(0px);
     visibility: visible;
   }
 }
@@ -28,9 +28,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: auto;
+
+  padding: 40px;
+
+  @media (max-width: 1080px) {
+    align-items: start;
+
+    padding: 0 12px 40px 12px;
+  }
+
   // .form__inner
 
   &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 120px;
+    overflow: auto;
+    align-items: center;
+
+    @media (max-width: 1440px) {
+      gap: 40px;
+    }
+
+    @media (max-width: 768px) {
+      gap: 40px;
+      align-items: start;
+      grid-template-columns: 1fr;
+    }
   }
 
   // .form__muted
@@ -40,6 +65,11 @@
     font-size: clamp(1rem, 0.945rem + 0.2vw, 1.125rem);
     font-weight: 400;
     margin-bottom: 4px;
+
+    @media (max-width: 440px) {
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
   }
 
   // .form__title
@@ -50,6 +80,10 @@
     font-weight: 400;
     line-height: 101.563%;
     margin-bottom: 40px;
+
+    @media (max-width: 440px) {
+      margin-bottom: 24px;
+    }
   }
 
   // .form__input
@@ -153,4 +187,40 @@
       width: 20px;
     }
   }
+}
+
+.form__subtitle {
+  color: var(--main-50, #e9ecfc);
+  font-size: clamp(1.25rem, 0.975rem + 1vw, 1.875rem);
+  font-weight: 400;
+  margin-bottom: 100px;
+
+  @media (max-width: 1080px) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 440px) {
+    margin-bottom: 20px;
+    font-size: 18px;
+    max-width: 360px;
+  }
+}
+
+.form__bottom-title {
+  color: var(--main-300, #798bec);
+
+  font-size: clamp(1.125rem, 0.96rem + 0.6vw, 1.5rem);
+  font-weight: 400;
+  display: block;
+  margin-bottom: 60px;
+
+  @media (max-width: 1080px) {
+    margin-bottom: 40px;
+  }
+}
+.footer__bottom-tel {
+  color: var(--main-300, #798bec);
+
+  font-size: clamp(1.125rem, 0.96rem + 0.6vw, 1.5rem);
+  font-weight: 400;
 }
