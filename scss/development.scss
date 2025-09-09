@@ -71,7 +71,7 @@
 
     @media (max-width: 480px) {
       width: 48px;
-      height:48px;
+      height: 48px;
 
       img {
         width: 100%;
@@ -108,7 +108,7 @@
 
   &__info {
     display: flex;
-    gap: 10px;
+    gap: 10px 10px;
     flex-wrap: wrap;
   }
 
@@ -126,6 +126,8 @@
     border: 1px solid var(--main-900, #060c2d);
 
     padding: 10px 16px;
+
+    height: max-content;
 
     @media (max-width: 440px) {
       padding: 8px 10px;
@@ -229,3 +231,12 @@
     opacity: 1;
   }
 }
+
+// .bottom-sw {
+//   .development-list__info {
+//     @media (max-width: 440px) {
+//       display: grid;
+//       grid-template-columns: 1fr 1fr;
+//     }
+//   }
+// }

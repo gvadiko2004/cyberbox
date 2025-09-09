@@ -10,7 +10,9 @@
 
   opacity: 0;
   visibility: hidden;
-  pointer-events: none;
+  pointer-events: none !important;
+
+  z-index: -1;
 
   transition: 0.2s ease-in-out;
   transform: translateY(20px);
@@ -21,9 +23,10 @@
 
   &.active {
     opacity: 1;
+    z-index: 11;
     visibility: visible;
     transform: translateY(0);
-    pointer-events: all;
+    pointer-events: all !important;
   }
 
   @media (max-width: 768px) {
@@ -187,6 +190,18 @@
     font-size: clamp(1.25rem, 1.14rem + 0.4vw, 1.5rem);
     font-weight: 400;
     margin-top: 10px;
+  }
+}
+
+.popup {
+  .banner {
+    display: none;
+  }
+}
+
+.popup.active {
+  .banner {
+    display: flex;
   }
 }
 

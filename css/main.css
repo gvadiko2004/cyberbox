@@ -933,7 +933,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10px;
+  gap: 10px 10px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -946,6 +946,9 @@ body {
   border-radius: 113px;
   border: 1px solid var(--main-900, #060c2d);
   padding: 10px 16px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 @media (max-width: 440px) {
   .development-list__info-item {
@@ -1212,7 +1215,8 @@ body {
   padding: 105px 0 0 0;
   opacity: 0;
   visibility: hidden;
-  pointer-events: none;
+  pointer-events: none !important;
+  z-index: -1;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
   -webkit-transform: translateY(20px);
@@ -1224,10 +1228,11 @@ body {
 }
 .popup.active {
   opacity: 1;
+  z-index: 11;
   visibility: visible;
   -webkit-transform: translateY(0);
           transform: translateY(0);
-  pointer-events: all;
+  pointer-events: all !important;
 }
 @media (max-width: 768px) {
   .popup {
@@ -1353,6 +1358,16 @@ body {
   font-size: clamp(1.25rem, 1.14rem + 0.4vw, 1.5rem);
   font-weight: 400;
   margin-top: 10px;
+}
+
+.popup .banner {
+  display: none;
+}
+
+.popup.active .banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .technologies__title {
